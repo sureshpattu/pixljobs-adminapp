@@ -13,15 +13,15 @@
     <div class="container">
         <div class="common_tab_links_wrap">
             <ul>
-                <li><a class="cta_link active" href="/">Jobs</a></li>
-                <li><a class="cta_link" href="/notifications">Notifications</a></li>
+                <li><a class="cta_link " href="/">Jobs</a></li>
+                <li><a class="cta_link active" href="/notifications">Notifications</a></li>
             </ul>
         </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="common_form_sec">
                     <div class="cards_wrap">
-                        {{>client/job_card_row data=data.result}}
+                        {{>client/notification_card_row data=data.result}}
                     </div>
                 </div>
             </div>

@@ -50,6 +50,15 @@
                 margin: 0 10px 0 0;
             }
 
+            .trunc_txt{
+                width: 100px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                padding-left: 10px;
+            }
+
             &.collapsed {
                 .icon_arrow_down {
                     transform: rotate(-90deg);
