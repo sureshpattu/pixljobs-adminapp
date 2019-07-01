@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pixlcoders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{>header_assets select2=true}}
+</head>
+<body class="dashboard_pg job_info_pg">
+{{>header}}
+<section class="common_main_sec">
+    {{>common_hero_sec}}
+    <div class="container">
+        <div class="common_tab_links_wrap">
+            <ul>
+                <li><a class="cta_link active" href="#">Jobs</a></li>
+                <li><a class="cta_link" href="#">Notifications</a></li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="common_form_sec">
+                    <div class="cards_wrap">
+                        {{>client/job_card_row data=data.result}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer select2=true}}
+</body>
+<script type="application/javascript">
+    $(function() {
+
+    });
+</script>
+</html>

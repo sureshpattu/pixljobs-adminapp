@@ -1,0 +1,209 @@
+{{#each data}}
+    <div class="panel main_card_sec js_main_card_sec">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-9">
+                    <a data-toggle="collapse" class="panel-title collapsed js_panel_title"
+                       data-parent="#accordion"
+                       href="#collapse_{{@index}}">
+                        <div class="title_sec">
+                            <span class="highlights">{{name}}</span>
+                            <span class="small_txt">5+ years</span>
+                            <img src="/img/icons/arrow-down-small.svg" alt="" class="icon_arrow_down">
+                        </div>
+                        <div class="sub_title_sec">
+                            <span class="small_txt">{{company.name}}, {{company.city}},</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <div class="cta_wrap">
+                        <a class="btn btn_blue">Publish</a>
+                        <a class="btn btn_red">Reject</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="collapse_{{@index}}" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="job_card">
+                    <div class="job_sec">
+                        <div class="job_tags">
+                            <div class="row">
+                                <div class="col-md-9 col-xs-12">
+                                    <div class="tags_wrap spl_wrap">
+                                        <div class="tags">
+                                            <img src="/img/icons/dollar.svg" class="dollar_icons">
+                                            {{salary_min}} - {{salary_max}}
+                                        </div>
+                                        <div class="tags">
+                                            <img src="/img/icons/calendar.svg" class="cal_icons">
+                                            {{#countDateTime created_at}}{{/countDateTime}}
+                                        </div>
+                                        <div class="tags ">
+                                            <img src="/img/icons/location.svg" class="loc_icons">
+                                            {{company.city}}
+                                        </div>
+                                        <div class="tags">
+                                            <img src="/img/icons/place.svg" class="place_icons">
+                                            {{#ifCond location_type '===' 'office'}}
+                                                On Site
+                                            {{else}}
+                                                Remote
+                                            {{/ifCond}}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-xs-12">
+                                    <div class="tags_wrap">
+                                        <div class=" tags btn_wrap">
+                                            <a href="#" class="post_tag">
+                                                Frontend
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work_sec">
+                        <div class="row row_c">
+                            <div class="col-md-4 col_bordered">
+                                <div class="option">TYPE:
+                                    <span class="option_val">{{job_type}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col_bordered">
+                                <div class="option">
+                                    WORKWEEK:
+                                    <span class="option_val">{{work_week}} hours</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col_bordered">
+                                <div class="option">
+                                    HOLIDAY:
+                                    <span class="option_val">{{holidays}} days</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job_desc">
+                        <div class="desc_details">
+                            <div class="about_sec">
+                                <div class="desc_title">
+                                    About the work
+                                </div>
+                                <div class="desc">
+                                    {{desc}}
+                                </div>
+                            </div>
+                            <div class="requirement_sec">
+                                <div class="desc_title">
+                                    Requirements
+                                </div>
+                                <div class="desc">
+                                    <ul class="requirement_list">
+                                        <li class="requirement_line">Lorem ipsum dolor sit amet, consectetur
+                                            adipiscing elit,
+                                        </li>
+                                        <li class="requirement_line">ed do eiusmod tempor</li>
+                                        <li class="requirement_line">incididunt ut labore et dolore magna
+                                            aliquaelementum eu facilisis
+                                            sed
+                                        </li>
+                                        <li class="requirement_line">odio morbi. Auctor eu augue ut lectus.
+                                            Lacus vestibulum sed arcu
+                                            non.
+                                            Leo in
+                                            vitae
+                                            turpis massa sed elementum tempus egestas. Vitae congue eu.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech_details">
+                        <div class="tech_sec">
+                            <div class="desc_title">
+                                Technologies
+                            </div>
+                            <div class="desc">
+                                <div class="row">
+                                    {{#each qa_job_technologies}}
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="col-md-6 col-xs-6">
+                                                    <div class="tech_name">{{technology.name}}</div>
+                                                </div>
+                                                <div class="col-md-6 col-xs-6">
+                                                    <div class="filled_bar"></div>
+                                                    <div class="filled_bar"></div>
+                                                    <div class="empty_bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about_company_card">
+                    <div class="company_desc">
+                        <div class="about_sec">
+                            <div class="desc_title">
+                                About Company
+                            </div>
+                            <div class="desc">
+                                {{company.about}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about_work_sec">
+                        <div class="row row_c">
+                            <div class="col-md-6 col_bordered">
+                                <div class="option">COMPANY SIZE:
+                                    <span class="option_val">{{company.size}}</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col_bordered">
+                                <div class="option">
+                                    INDUSTRY:
+                                    <span class="option_val">{{company.industry.name}}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="company_desc">
+                        <div class="about_sec">
+                            <div class="desc_title">
+                                Benefits
+                            </div>
+                            <div class="desc benefits_desc">
+                                <div class="row">
+                                    {{#each company.company_benefits}}
+                                        <div class="col-md-6">
+                                            <div class="circle_wrap">
+                                                <div class="circle_tick">
+                                                    <img src="/img/icons/tick.svg" class="icons tick">
+                                                </div>
+                                                <div class="title">{{benefit.name}}</div>
+                                            </div>
+                                        </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta_wrap">
+                    <a class="btn btn_blue">Publish</a>
+                    <a class="btn btn_red">Reject</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}

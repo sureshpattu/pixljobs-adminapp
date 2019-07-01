@@ -4,8 +4,8 @@ const helper_utils = require('../routes/util/common');
 const config       = require('./config');
 
 exports.clearUserCookie = function(req, res, next) {
-    res.clearCookie('pixljob_user_id');
-    res.clearCookie('pixljob_user_token');
+    res.clearCookie('pj_ad_user_id');
+    res.clearCookie('pj_ad_user_token');
     next();
 };
 
@@ -13,33 +13,18 @@ function clearCookie(req, res) {
     if(req.session && req.session.user) {
         req.session.user = [];
     }
-    res.clearCookie('pixljob_user_token');
-    res.clearCookie('pixljob_user_id');
+    res.clearCookie('pj_ad_user_token');
+    res.clearCookie('pj_ad_user_id');
 }
 
-function checkApplicantLogin(req, cb) {
-    if(req.cookies && req.cookies.pixljob_user_id && req.cookies.pixljob_user_token) {
+function checkUserLogin(req, cb) {
+    if(req.cookies && req.cookies.pj_ad_user_id && req.cookies.pj_ad_user_token) {
         //Make api call to backend and check is user is valid
         req.body = {
-            id   :req.cookies.pixljob_user_id,
-            token:req.cookies.pixljob_user_token
+            id   :req.cookies.pj_ad_user_id,
+            token:req.cookies.pj_ad_user_token
         };
-        helper_utils.makeApiRequest(req, 'POST', '/applicant-auth/login/check', function(_response) {
-            cb(_response);
-        });
-    } else {
-        cb({error:true, msg:'User Not Logged in'});
-    }
-}
-
-function checkRecruiterLogin(req, cb) {
-    if(req.cookies && req.cookies.pixljob_user_id && req.cookies.pixljob_user_token) {
-        //Make api call to backend and check is user is valid
-        req.body = {
-            id   :req.cookies.pixljob_user_id,
-            token:req.cookies.pixljob_user_token
-        };
-        helper_utils.makeApiRequest(req, 'POST', '/recruiter-auth/login/check', function(_response) {
+        helper_utils.makeApiRequest(req, 'POST', '/admin-auth/login/check', function(_response) {
             cb(_response);
         });
     } else {
@@ -66,38 +51,15 @@ function showLoginPage(req, res) {
     res.redirect('/login?ref=' + req.originalUrl);
 }
 
-exports.getUserIdFromSession = function(req, res, next) {
-    if(req.session.hasOwnProperty('user')) {
-        return req.session.user.id;
-    } else {
-        res.redirect('/login?ref=' + req.originalUrl);
-    }
-};
-
-exports.isApplicantLoggedIn = function(req, res, next) {
+exports.isUserLoggedIn = function(req, res, next) {
     if(checkPath(req)) {
         next();
     } else {
-        checkApplicantLogin(req, function(data) {
+        checkUserLogin(req, function(data) {
             if(data && !data.error) {
                 next();
             } else {
                 showLoginPage(req, res);
-            }
-        });
-    }
-};
-
-exports.isRecruiterLoggedIn = function(req, res, next) {
-    if(checkPath(req)) {
-        //Allow user to go to next page
-        next();
-    } else {
-        checkRecruiterLogin(req, function(data) {
-            if(data && !data.error) {
-                next();
-            } else {
-                showLoginPage(req, res)
             }
         });
     }

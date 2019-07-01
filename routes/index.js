@@ -9,13 +9,31 @@ router.get('/login', function(req, res) {
 });
 
 router.get('/logout', function(req, res) {
-    res.clearCookie('pixljob_ad_user_id');
-    res.clearCookie('pixljob_ad_user_token');
+    res.clearCookie('pj_ad_user_id');
+    res.clearCookie('pj_ad_user_token');
     res.redirect('/login');
 });
 
-router.get('/', function(req, res) {
-    res.render('form_template');
+router.get('/', verify.isUserLoggedIn, function(req, res) {
+    async.parallel([
+        function(callback) {
+            helper_utils.makeApiRequest(req, 'GET', '/admin/' + req.cookies.pj_ad_user_id,
+                function(_res) {
+                    callback(null, _res);
+                });
+        },
+        function(callback) {
+            helper_utils.makeApiRequest(req, 'POST', '/admin/qa-jobs/search',
+                function(_res) {
+                    callback(null, _res);
+                });
+        }
+    ], function(err, results) {
+        res.render('dashboard', {
+            user:!results[0].error ? results[0].data : [],
+            data:!results[1].error ? results[1].data : []
+        });
+    });
 });
 
 module.exports = router;

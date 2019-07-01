@@ -13,7 +13,6 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/" title="PixlJobs Search Page">Jobs</a></li>
                     {{#if user}}
                         <li class="dropdown user_link_wrap">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -24,23 +23,12 @@
                                 {{/if}}
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                {{#if user.is_recruiter}}
-                                    <li><a href="/recruiter">Profile</a></li>
-                                    <li><a href="/recruiter/applications/{{user.id}}">Applications</a></li>
-                                    <li><a href="#">Preferences</a></li>
-                                {{else}}
-                                    <li><a href="/applicant-account">Profile</a></li>
-                                    <li><a href="/applicant/applications/{{user.id}}">Applications</a></li>
-                                    <li><a href="#">Preferences</a></li>
-                                {{/if}}
+                                <li><a href="/">Jobs</a></li>
                                 <li><a href="/logout" title="PixlJobs Login Page">Log out</a></li>
                             </ul>
                         </li>
                     {{else}}
                         <li><a href="/login" title="PixlJobs Login Page">Log in</a></li>
-                    {{/if}}
-                    {{#if user.is_recruiter}}
-                        <li><a href="/post-job" title="PixlJobs Post a Job Page" class="btn">Post a job</a></li>
                     {{/if}}
                 </ul>
             </div>
