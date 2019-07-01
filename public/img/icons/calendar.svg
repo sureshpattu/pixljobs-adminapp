@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-PJ-JobInfo" transform="translate(-358.000000, -305.000000)" fill="#D3DAE0" fill-rule="nonzero">
+            <path d="M359,309 L359,317 L369,317 L369,309 L359,309 Z M368,306 L369,306 C369.552285,306 370,306.447715 370,307 L370,317 C370,317.552285 369.552285,318 369,318 L359,318 C358.447715,318 358,317.552285 358,317 L358,307 C358,306.447715 358.447715,306 359,306 L360,306 L360,305 L362,305 L362,306 L366,306 L366,305 L368,305 L368,306 Z M364,312 L367,312 L367,315 L364,315 L364,312 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

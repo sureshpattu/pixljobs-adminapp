@@ -1,0 +1,337 @@
+.signup_pg {
+    background-color: #f8f8f9;
+
+    .signup_wrap {
+        padding: 69px 75px 78px 78px;
+
+        .arrow_down {
+            position: absolute;
+            top: 18px;
+            right: 8px;
+            background: #FFFFFF;
+            padding: 10px;
+        }
+
+        .pixl_form_group {
+            margin-bottom: 45px;
+
+            .text_area {
+                overflow: auto !important;
+                height: 95px;
+
+                input {
+                    border: none;
+                    background: none;
+                    font-weight: 400;
+                    z-index: 1;
+                    font-size: 14px;
+                    color: #637282;
+                    padding: 4px 12px;
+                }
+
+                input:focus {
+                    outline: none;
+                }
+
+                button {
+                    margin: 4px;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    border: solid 1px #d3dae0;
+                    box-shadow: 0 1px 2px 0 rgba(195, 195, 195, 0.8);
+                    background-color: #ffffff;
+                    font-size: 14px;
+                    color: #637282;
+                }
+
+                button:after {
+                    content: "\d7";
+                    color: #637282;
+                    margin-left: 16px;
+                    opacity: .46;
+                    font-size: 18px;
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        .upload_photo_wrap {
+            width: 226px;
+            height: 226px;
+            border: solid 1px #dce0e3;
+            border-radius: 100%;
+            background-color: #ffffff;
+            position: relative;
+            z-index: 0;
+            margin: 0 auto;
+            box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.12);
+
+            input[type='file'] {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+            }
+
+            .img_sec {
+                width: 100%;
+                height: 100%;
+            }
+
+            .pf_img_wrap {
+                width: 216px;
+                height: 216px;
+                position: absolute;
+                overflow: hidden;
+                top: 4px;
+                left: 4px;
+                border-radius: 100%;
+                border: dotted 2px #d3dae0;
+            }
+
+            .icon_wrap {
+                display: inline-block;
+                text-align: center;
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0.77;
+
+                .upload_pic {
+                    background-image: url("/img/icons/upload-pic.svg");
+                    background-repeat: no-repeat;
+                    margin: 0 0 0 19px;
+                    height: 38px;
+                    opacity: 0.77;
+                }
+
+                .upload_txt {
+                    font-size: 12px;
+                    font-weight: 500;
+                    opacity: 0.43;
+                    color: #637282;
+                }
+
+            }
+
+            .input_file {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1;
+                width: 100%;
+            }
+        }
+
+        .signup_title_wrap {
+            .title {
+                background-color: #ffed06;
+                display: inline-block;
+                font-size: 18px;
+            }
+
+            .sub_title {
+                font-size: 30px;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+                color: #4e5862;
+                text-transform: uppercase;
+            }
+        }
+
+        .role_wrap {
+            display: table;
+            width: 100%;
+
+            .role_row {
+                display: table-row;
+
+                .role {
+                    display: table-cell;
+                    border-radius: 6px;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+                    background-color: #ffffff;
+                    padding: 35px 30px;
+                    font-size: 12px;
+                    letter-spacing: 0.6px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: #637282;
+                    opacity: 0.54;
+                    text-transform: uppercase;
+                    width: 180px;
+
+                    .role_icon {
+                        padding-right: 10px;
+                    }
+                }
+
+                .default_icon {
+                    display: inline-block;
+                }
+
+                .color_icon {
+                    display: none;
+                }
+
+                a.active {
+                    color: #25de8c !important;
+                    opacity: 1;
+
+                    .default_icon {
+                        display: none;
+                    }
+
+                    .color_icon {
+                        display: inline-block;
+                    }
+                }
+
+
+                .role_applicant {
+                    display: table-cell;
+                    border-radius: 6px;
+                    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.13);
+                    background-color: #ffffff;
+                    padding: 35px 30px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    letter-spacing: 0.6px;
+                    text-align: center;
+                    color: #25de8c;
+                    text-transform: uppercase;
+
+                    .role_icon {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+
+        .gl_input_text {
+            opacity: .56;
+            font-size: 12px;
+            color: #637282;
+            margin-left: 16px;
+        }
+
+        .verify_link {
+            font-size: 12px;
+            font-weight: bold;
+            color: #ffffff;
+            border-radius: 3px;
+            background-color: #f5a623;
+            padding: 3px 5px 2px 5px;
+            margin-left: 4px;
+        }
+
+        .non_verify_link {
+            font-size: 12px;
+            font-weight: 700;
+            color: #b7b7b7;
+            border-radius: 3px;
+            background-color: #ececec;
+            padding: 3px 5px 2px 5px;
+            margin-left: 4px;
+        }
+
+        .inr_txt {
+            position: absolute;
+            top: 25px;
+            z-index: 1;
+            right: 20px;
+            color: #637282;
+            font-size: 12px;
+        }
+
+        .cta_wrap {
+            text-align: center;
+            margin-top: 60px;
+
+            .btn_big {
+                margin-left: 14px;
+            }
+        }
+    }
+
+
+    @media (max-width: 767px) {
+
+        .common_hero_sec {
+            height: 92px;
+        }
+
+        .signup_wrap {
+            margin: 0px -15px;
+            box-shadow: 0 14px 37px 0 rgba(0, 0, 0, 0.15);
+            background-image: linear-gradient(209deg, #ffffff, #f7f7f7);
+            padding: 15px 12px 10px 12px;
+
+
+            .signup_title_wrap .title {
+                background-color: #ffed06;
+                display: inline-block;
+                font-size: 12px;
+            }
+
+            .signup_title_wrap .sub_title {
+                //display: inline-block;
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 0.4px;
+                color: #4e5862;
+                text-transform: uppercase;
+            }
+
+            .upload_photo_wrap {
+                width: 226px;
+                height: 226px;
+                border: solid 1px #dce0e3;
+                border-radius: 161px;
+                background-color: #ffffff;
+                position: relative;
+                margin: 0 auto;
+                box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.12);
+                background-color: #ffffff;
+            }
+
+            .cta_wrap {
+                text-align: center;
+                margin: 30px 0 0 0;
+
+                .btn_preview {
+                    margin: 0 0 14px 0;
+                }
+
+                .btn_big {
+                    margin-left: 0px;
+                }
+            }
+
+            .role_wrap .role_row .role {
+                display: table-cell;
+                border-radius: 6px;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .13);
+                background-color: #fff;
+                padding: 20px 20px;
+                font-size: 12px;
+                letter-spacing: .6px;
+                font-weight: 600;
+                text-align: center;
+                color: #637282;
+                opacity: .54;
+                text-transform: uppercase;
+                /* width: 149px; */
+            }
+
+        }
+    }
+
+}

@@ -1,0 +1,73 @@
+[
+    {
+        "ID": 1,
+        "booking_date": "23/07/2018",
+        "booking_time": "10:20am",
+        "status": "pending",
+        "hospital": {
+            "ID": 11,
+            "hospital_name": "Fortis Hospital",
+            "address": "Arrekare, Bannerghatta, Bangalore",
+            "rating": 3,
+            "distance_from": "1",
+            "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+            "services": [
+                "Ortho",
+                "ENT",
+                "EYE",
+                "All Lab Test"
+            ],
+            "time": [
+                "24hrs"
+            ],
+            "total_reviews": 309
+        }
+    },
+    {
+        "ID": 12,
+        "booking_date": "20/07/2018",
+        "booking_time": "10:20am",
+        "status": "completed",
+        "hospital": {
+            "ID": 1,
+            "hospital_name": "Narayana Hospital",
+            "address": "HSR Layout, Sector 3, Bangalore",
+            "rating": 4,
+            "distance_from": "1",
+            "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+            "services": [
+                "EYE",
+                "ENT",
+                "Blood Test"
+            ],
+            "time": [
+                "24hrs"
+            ],
+            "total_reviews": 67
+        }
+    },
+    {
+        "ID": 10,
+        "booking_date": "20/07/2018",
+        "booking_time": "10:20am",
+        "status": "completed",
+        "hospital": {
+            "ID": 13,
+            "hospital_name": "Columbia Asia Hospital",
+            "address": "Sarjapur Road, Bangalore",
+            "rating": 3,
+            "distance_from": "1",
+            "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+            "services": [
+                "Neuro",
+                "ENT",
+                "EYE",
+                "All Lab test"
+            ],
+            "time": [
+                "24hrs"
+            ],
+            "total_reviews": 56
+        }
+    }
+]

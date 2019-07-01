@@ -1,0 +1,96 @@
+.menu_wrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $back_c_2;
+    z-index: 999;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+
+    .menu_list {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        border-top: 1px solid $br_c_1;
+
+        .menu_icon_sec {
+            display: inline-block;
+            padding: 10px 50px 12px 20px;
+            text-align: center;
+
+            &:first-child {
+                position: absolute;
+                left: 0;
+                border-right: 1px solid $br_c_1;
+                padding: 17px 20px 16px 20px;
+
+                img {
+                    width: 30px;
+                }
+            }
+            &:last-child {
+                position: absolute;
+                right: 0;
+                border-left: 1px solid $br_c_1;
+                padding: 11px 20px 16px 20px;
+            }
+            img {
+                display: inline-block;
+                max-height: 30px;
+            }
+            span {
+                display: block;
+                text-align: center;
+                padding-top: 3px;
+            }
+
+            &.active {
+
+                img.svg {
+                    fill: $d_c_1;
+                }
+                span {
+                    color: $d_c_1;
+                }
+            }
+            .account_link_wrap {
+                cursor: pointer;
+
+                .dropdown-menu {
+                    background-color: #f9f9f9;
+                    bottom: 150%;
+                    padding: 10px 0;
+
+                    li {
+                        a {
+                            padding: 7px 20px;
+                        }
+                    }
+                    .divider_wrap {
+                        padding: 0 20px;
+                    }
+                    .divider_sec {
+                        border-bottom: 1px solid #ddd;
+                        margin: 7px 0;
+                        padding: 0;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 100%;
+                        right: 20px;
+                        width: 0;
+                        height: 0;
+                        border-right: 15px solid transparent;
+                        border-left: 15px solid transparent;
+                        border-top: 15px solid #f9f9f9;
+                    }
+                }
+            }
+        }
+
+    }
+}

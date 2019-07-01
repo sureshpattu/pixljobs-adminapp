@@ -1,0 +1,371 @@
+.view_user_profile_pg {
+    font-family: $body_txt_font_2;
+    font-size: 14px;
+    font-weight: 300;
+
+    .bredcrumb_sec {
+        background-image: linear-gradient(to bottom, #5363dc, #2ac0f5);
+
+        .cont_sec {
+            padding: 40px 0 20px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        .fa {
+            color: #ffffff;
+            font-size: 20px;
+            margin: 0 4px 0 20px;
+            position: relative;
+            top: -1px;
+        }
+        .dropdown {
+            display: inline-block;
+
+            .dd_btn {
+                border: none;
+                font-size: 24px;
+                font-weight: 300;
+                color: #ffffff;
+                background-color: transparent;
+
+                &:focus {
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+            .dropdown-menu {
+
+            }
+        }
+        .hd_nav_pills_wrap {
+            .nav {
+                li {
+                    border-radius: 2px 2px 0 0;
+
+                    a {
+                        background-color: transparent;
+                        opacity: 0.81;
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: #ffffff;
+
+                        &:hover, &:focus {
+                            background-color: transparent;
+                        }
+                    }
+
+                    &.active {
+                        background-color: #ffffff;
+                        a {
+                            color: #181b7c;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .form_sec {
+        .form-control {
+            box-shadow: none;
+
+            &[disabled] {
+                background-color: transparent;
+            }
+        }
+        select.form-control {
+            background-image: none;
+        }
+        .edit_cta_wrap {
+            .cta_link {
+                font-size: 11px;
+                font-weight: 400;
+                color: #5696de;
+                border-radius: 2px;
+                background-color: #eaf5ff;
+                padding: 4px 8px 3px;
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+        .desc_sec {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #6c7a84;
+        }
+
+    }
+    .body_vitals_sec {
+        border-top: 1px solid #97979747;
+
+        .title {
+            padding: 40px 0 30px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #6c7a84;
+
+            .highlights {
+                font-weight: 600;
+            }
+        }
+    }
+    .allergies_wrap {
+        .allergy {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #6c7a84;
+            border-radius: 2px;
+            background-color: #f0f0f0;
+            padding: 3px 6px 1px;
+            display: inline-block;
+            margin: 4px 6px 0 0;
+
+            &:last-child {
+                margin: 4px 0 0 0;
+            }
+        }
+    }
+
+    .info_wrap {
+        padding: 0 0 20px;
+        .label_sec {
+            font-size: 12px;
+            font-weight: 300;
+            color: #96a1a9;
+            padding: 0 0 6px;
+        }
+        .label_value_sec {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #6c7a84;
+        }
+    }
+
+    .tbl_sec {
+        display: table;
+        width: 100%;
+        margin: 30px 0 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+    }
+    .tbl_cell {
+        display: table-cell;
+        vertical-align: top;
+        padding-right: 5px;
+
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    .tbl_cta_wrap {
+        .cta_link {
+            font-size: 11px;
+            font-weight: 400;
+            color: #b7bdc1;
+            border-radius: 2px;
+            background-color: #f7f7f7;
+            padding: 3px 7px 2px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .surgery_link {
+            color: #e98c98;
+            background-color: #fdeff4;
+        }
+        .admitted_link {
+            color: #549a54;
+            background-color: #c9f7ed;
+        }
+        .view_link {
+            color: #5696de;
+            background-color: #eaf5ff;
+        }
+    }
+    #emergency_contact {
+
+        .tbl_cta_wrap {
+            .cta_link {
+                border-radius: 2px;
+                display: block;
+                text-align: center;
+                margin: 0 0 5px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            .modify_link {
+                color: #5696de;
+                background-color: #eaf5ff;
+            }
+            .del_link {
+                color: #e98c98;
+                background-color: #fdeff4;
+            }
+            .success_link {
+                color: #549a54;
+                background-color: #c9f7ed;
+            }
+        }
+        .tbl_sec {
+            border-bottom: 1px dashed rgba(151, 151, 151, 0.71);
+        }
+
+        .form_sec {
+            .form-group {
+                margin: 0 0 20px;
+                position: relative;
+            }
+            .form-control {
+                height: 34px;
+            }
+
+            .err_msg {
+                display: none;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.58;
+                color: #e95e6f;
+                position: absolute;
+                bottom: -24px;
+                left: 0;
+                right: 0;
+            }
+
+            .edit_emrg_inputs_row {
+
+                .form-control {
+                    box-shadow: 0 2px 0 -1px #b7b7b7;
+                    height: 34px;
+
+                    &:focus {
+                        box-shadow: 0 4px 0 -2px #5a61df;
+
+                    }
+                }
+
+                .error {
+                    .control-label {
+                        color: #e95e6f;
+                    }
+                    .form-control {
+                        box-shadow: 0 4px 0 -2px #d0021b;
+                    }
+                    .err_msg {
+                        display: block;
+                    }
+                }
+
+            }
+        }
+        .add_contact_wrap {
+            text-align: center;
+            padding: 0 0 30px;
+            .cta_link {
+                text-decoration: none;
+                display: inline-block;
+                cursor: pointer;
+                font-size: 16px;
+                font-weight: 400;
+                color: #5696de;
+            }
+            .fa {
+                width: 25px;
+                height: 25px;
+                border: 1px solid #5696de;
+                border-radius: 100%;
+                padding: 5px 0 0;
+                display: inline-block;
+                vertical-align: top;
+                font-size: 14px;
+                margin: 0 10px 0 0;
+            }
+        }
+    }
+
+    #in_patient_deatails {
+        min-height: 400px;
+        padding: 30px 0 100px;
+
+        .tbl_sec {
+            border-bottom: 1px dashed rgba(151, 151, 151, 0.71);
+        }
+
+        .hospital_cell {
+            width: 170px;
+        }
+        .doctor_cell {
+            width: 160px;
+        }
+        .time_cell {
+            width: 110px;
+        }
+        .date_cell {
+            width: 120px;
+        }
+        .department_cell {
+            width: 120px;
+        }
+        .ward_cell {
+            width: 50px;
+        }
+        .status_cell {
+            width: 150px;
+        }
+    }
+
+    #patient_reports {
+        .tbl_sec {
+            margin: 0;
+            border-bottom: 1px dashed #9797979e;
+            padding: 8px 0;
+        }
+
+        .tbl_hd_sec {
+            border-radius: 2px;
+            background-color: #f2f2f2;
+            padding: 7px 11px 6px;
+            border-bottom: none;
+
+            .tbl_cell {
+                font-size: 12px;
+                font-weight: 600;
+                color: #83888d;
+            }
+        }
+
+        .tbl_cell {
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #6c7a84;
+            padding: 5px 2px;
+        }
+
+        .pres_no_cell {
+            width: 150px;
+        }
+        .date_cell {
+            width: 150px;
+        }
+        .doctor_cell {
+            width: 300px;
+        }
+        .pres_cta_cell {
+            text-align: right;
+        }
+    }
+
+}

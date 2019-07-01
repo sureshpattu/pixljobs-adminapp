@@ -1,0 +1,216 @@
+[
+  {
+    "ID": 15,
+    "Name": "Cough",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      6,
+      24,
+      25,
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 17,
+    "Name": "Chest pain",
+    "HasRedFlag": true,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 29,
+    "Name": "Shortness of breath",
+    "HasRedFlag": true,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Dyspnea",
+      "Breathlessness"
+    ]
+  },
+  {
+    "ID": 30,
+    "Name": "Wheezing",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      6,
+      24,
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 31,
+    "Name": "Chest tightness",
+    "HasRedFlag": true,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Tightness in chest",
+      "Oppressive feeling in the chest"
+    ]
+  },
+  {
+    "ID": 37,
+    "Name": "Palpitations",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Palpitations"
+    ]
+  },
+  {
+    "ID": 44,
+    "Name": "Nausea",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      6,
+      22,
+      15,
+      31,
+      16,
+      36,
+      17,
+      47
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 45,
+    "Name": "Heartburn",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      6,
+      24,
+      15,
+      31,
+      16,
+      36
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Pyrosis"
+    ]
+  },
+  {
+    "ID": 64,
+    "Name": "Sputum",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      15,
+      6,
+      31,
+      25
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 133,
+    "Name": "Night cough",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      6,
+      24,
+      25,
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 153,
+    "Name": "Fast, deepened breathing",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      6,
+      24,
+      25,
+      15,
+      31,
+      16,
+      36
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Fast breathing",
+      "Hyperventilation"
+    ]
+  },
+  {
+    "ID": 233,
+    "Name": "Bloody cough",
+    "HasRedFlag": true,
+    "HealthSymptomLocationIDs": [
+      15,
+      31,
+      6,
+      25
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Bloody sputum",
+      "Coughing up blood",
+      "Hemoptysis"
+    ]
+  },
+  {
+    "ID": 250,
+    "Name": "Breathing-related pains",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": []
+  },
+  {
+    "ID": 985,
+    "Name": "Heart murmur",
+    "HasRedFlag": false,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Abnormal heart sound",
+      "Cardiac murmur"
+    ]
+  },
+  {
+    "ID": 986,
+    "Name": "Irregular heartbeat",
+    "HasRedFlag": true,
+    "HealthSymptomLocationIDs": [
+      15,
+      31
+    ],
+    "ProfName": "",
+    "Synonyms": [
+      "Arrhythmia"
+    ]
+  }
+]

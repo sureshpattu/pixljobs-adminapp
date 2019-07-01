@@ -1,0 +1,30 @@
+<div class="modal fade imageUploadPopup" id="profileImageCropperModal" role="dialog" aria-labelledby="modalLabel"
+     tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Upload image</h5>
+                <button type="button" class="close js_img_popup_close" data-dismiss="modal"
+                        aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>
+                        Select file :
+                    </label>
+                    <input type="file" class="js_file_input" data-preview="#userPicPreviewImage">
+                    <input type="hidden" class="js_profile_img_data_uri_dum">
+                    <input type="hidden" class="js_profile_img_data_uri">
+                </div>
+                <div class="img-container">
+                    <img id="userPicPreviewImage" src="" alt="Picture">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-success js_submit_img">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<header class="header_pg">
+    <nav class="navbar ">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/" title="PixlJobs Home Page">
+                    <img src="/img/logo-normal.png" alt="PixlJobs Logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="/" title="PixlJobs Search Page">Jobs</a></li>
+                    {{#if user}}
+                        <li class="dropdown user_link_wrap">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                {{#if user.photo}}
+                                    <img src="/api/applicant/photo/{{user.photo}}" class="user_img">
+                                {{else}}
+                                    <img src="/img/user_icon.svg" class="user_img">
+                                {{/if}}
+                                <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                {{#if user.is_recruiter}}
+                                    <li><a href="/recruiter">Profile</a></li>
+                                    <li><a href="/recruiter/applications/{{user.id}}">Applications</a></li>
+                                    <li><a href="#">Preferences</a></li>
+                                {{else}}
+                                    <li><a href="/applicant-account">Profile</a></li>
+                                    <li><a href="/applicant/applications/{{user.id}}">Applications</a></li>
+                                    <li><a href="#">Preferences</a></li>
+                                {{/if}}
+                                <li><a href="/logout" title="PixlJobs Login Page">Log out</a></li>
+                            </ul>
+                        </li>
+                    {{else}}
+                        <li><a href="/login" title="PixlJobs Login Page">Log in</a></li>
+                    {{/if}}
+                    {{#if user.is_recruiter}}
+                        <li><a href="/post-job" title="PixlJobs Post a Job Page" class="btn">Post a job</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

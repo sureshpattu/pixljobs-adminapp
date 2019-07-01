@@ -1,0 +1,106 @@
+[
+    {
+        "ID": 1,
+        "hospital_name": "Apollo Clinic",
+        "address": "HSR, Sector 3, Bangalore",
+        "rating": 4,
+        "distance_from": "1",
+        "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+        "services": [
+            "EYE",
+            "ENT",
+            "Blood Test",
+            "MRI Scan"
+        ],
+        "time": [
+            "morning",
+            "evening"
+        ],
+        "total_reviews": 5
+    },{
+        "ID": 3,
+        "hospital_name": "Apollo Hospital",
+        "address": "Bannerghatta, IIMB, Bangalore",
+        "rating": 4,
+        "distance_from": "1",
+        "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+        "services": [
+            "EYE",
+            "ENT",
+            "Blood Test",
+            "MRI Scan"
+        ],
+        "time": [
+            "morning",
+            "evening"
+        ],
+        "total_reviews": 155
+    },{
+        "ID": 9,
+        "hospital_name": "Fortis Hospital",
+        "address": "Arrekare, Bannerghatta, Bangalore",
+        "rating": 3,
+        "distance_from": "1",
+        "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+        "services": [
+            "Ortho",
+            "ENT",
+            "EYE",
+            "All Lab Test"
+        ],
+        "time": [
+            "24hrs"
+        ],
+        "total_reviews": 309
+    },{
+        "ID": 11,
+        "hospital_name": "Narayana Hospital",
+        "address": "HSR Layout, Sector 3, Bangalore",
+        "rating": 4,
+        "distance_from": "1",
+        "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+        "services": [
+            "EYE",
+            "ENT",
+            "Blood Test"
+        ],
+        "time": [
+            "24hrs"
+        ],
+        "total_reviews": 67
+    },{
+        "ID": 12,
+        "hospital_name": "Green View Clinic",
+        "address": "Koramangala, Block 1, Bangalore",
+        "rating": 4,
+        "distance_from": "1",
+        "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+        "services": [
+            "General",
+            "EYE",
+            "ENT",
+            "All Scan"
+        ],
+        "time": [
+            "evening"
+        ],
+        "total_reviews": 34
+    },{
+        "ID": 13,
+        "hospital_name": "Columbia Asia Hospital",
+        "address": "Sarjapur Road, Bangalore",
+        "rating": 3,
+        "distance_from": "1",
+        "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+        "services": [
+            "Neuro",
+            "ENT",
+            "EYE",
+            "All Lab test"
+        ],
+        "time": [
+            "24hrs"
+        ],
+        "total_reviews": 56
+    }
+]

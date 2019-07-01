@@ -1,0 +1,130 @@
+.footer_pg {
+
+    .navbar-brand {
+        padding: 0;
+        height: auto;
+
+        img {
+            height: 40px;
+        }
+    }
+
+    .navbar {
+        margin-bottom: 0;
+        height: 201px;
+        background-color: #292929;
+        padding: 70px 0 100px;
+        border-radius: 0;
+    }
+
+    .nav {
+        li {
+            a {
+                opacity: 0.6;
+                font-size: 15px;
+                color: #ffffff;
+
+                &:focus, &:hover {
+                    background: transparent;
+                }
+            }
+
+            a.btn {
+                width: 145px;
+                height: 47px;
+                border-radius: 3px;
+                background-color: #25de8c;
+                color: #ffffff;
+                padding: 12px 0 0;
+                margin: 0 0 0 15px;
+            }
+        }
+    }
+
+    .find_job_sec {
+        padding: 40px 0;
+        background-color: #4a6fdf;
+
+        .title {
+            opacity: 0.9;
+            font-size: 33px;
+            font-weight: 300;
+            color: #ffffff;
+            padding: 5px 0 0 0;
+        }
+    }
+
+    .input_wrap {
+        display: table;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.17);
+        background-color: #ffffff;
+        overflow: hidden;
+        height: 50px;
+
+        .cell_one, .cell_two {
+            display: table-cell;
+            border: none;
+            height: 50px;
+            vertical-align: top;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        .cell_one {
+            width: 70%;
+            border-radius: 3px 0 0 3px;
+            padding: 6px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #363636;
+        }
+
+        .cell_two {
+            width: 30%;
+            border-radius: 0 3px 3px 0;
+            background-color: #25de8c;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+    }
+}
+
+@media all and(max-width: 767px) {
+    .footer_pg {
+        .find_job_sec {
+            padding: 90px 0;
+            .title {
+                font-size: 24px;
+                padding: 0 0 20px;
+            }
+        }
+
+        .navbar {
+            height: auto;
+            padding: 50px 0 30px;
+        }
+
+        .navbar-collapse {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+
+        .nav li a {
+            text-align: center;
+        }
+
+        .navbar-brand {
+            float: none;
+            display: inline-block;
+        }
+
+        .navbar-header {
+            text-align: center;
+        }
+    }
+}

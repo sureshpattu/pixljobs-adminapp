@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{>header_assets select2=true ranger=true}}
+</head>
+<body class="search_pg">
+{{>header user=user}}
+<section class="hero_sec">
+    <div class="container">
+        <div class="title">
+            Search for your dream job
+        </div>
+        <div class="search_input_wrap">
+            <input type="text" class="form-control search_input js_search_input">
+            <img src="/img/icons/search.svg" alt="" class="fa-search">
+        </div>
+        <div class="job_found_txt">
+            {{data.total}} job offers found
+        </div>
+    </div>
+</section>
+<section class="main_cont_sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="cards_wrap js_job_list_wrap">
+                    {{>client/job_search_card data=data.result}}
+                </div>
+                <div class="bottom_cta_wrap">
+                    <a class="cta_load_more_link {{#ifCond data.result.pages '>' '1'}}hide{{/ifCond}} js_load_more_btn">
+                        Show 10 more job offers
+                        <img src="/img/icons/arrow-down.svg" class="fa" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="filters_wrap">
+                    <div class="filter_sec">
+                        <label class="box_label">
+                            Job category
+                        </label>
+                        <div class="box_sec">
+                            <select class="form-control js_select2 js_category">
+                                <option value="">Choose category</option>
+                                {{#each categories}}
+                                    <option value="{{this.id}}">{{this.name}}</option>
+                                {{/each}}
+                            </select>
+                            <img src="/img/icons/arrow-down-dark.svg" alt="" class="arrow_down">
+                        </div>
+                    </div>
+                    <div class="filter_sec">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <label class="box_label">
+                                    Location
+                                </label>
+                            </div>
+                            <div class="col-xs-6 text-right">
+                                <label class="check_box right">
+                                    Remote
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="box_sec">
+                            <input type="text" class="form-control" placeholder="City, Country, Street">
+                            <div class="icon_wrap">
+                                <img src="/img/icons/location-dark.svg" alt="" class="icon_marker_sec">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter_sec">
+                        <label class="box_label">
+                            Job Type
+                        </label>
+                        <div class="box_sec">
+                            <ul class="list_sec">
+                                <li class="{{#if job_type_count.FullTime}}active{{/if}}">
+                                    <div class="type_name">Full time</div>
+                                    <div class="type_number">
+                                        {{#if job_type_count.FullTime}}
+                                            {{job_type_count.FullTime}}
+                                        {{else}}
+                                            0
+                                        {{/if}}
+                                    </div>
+                                    <label class="check_box">
+                                        <input type="checkbox"
+                                               class="js_job_type_checkbox"
+                                               data-val="FullTime"
+                                               {{#if job_type_count.FullTime}}{{else}}disabled{{/if}}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="{{#if job_type_count.PartTime}}active{{/if}}">
+                                    <div class="type_name">Part time</div>
+                                    <div class="type_number">
+                                        {{#if job_type_count.PartTime}}
+                                            {{job_type_count.PartTime}}
+                                        {{else}}
+                                            0
+                                        {{/if}}
+                                    </div>
+                                    <label class="check_box">
+                                        <input type="checkbox"
+                                               class="js_job_type_checkbox"
+                                               data-val="PartTime"
+                                               {{#if job_type_count.PartTime}}{{else}}disabled{{/if}}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="{{#if job_type_count.Contract}}active{{/if}}">
+                                    <div class="type_name">Contract</div>
+                                    <div class="type_number">
+                                        {{#if job_type_count.Contract}}
+                                            {{job_type_count.Contract}}
+                                        {{else}}
+                                            0
+                                        {{/if}}
+                                    </div>
+                                    <label class="check_box">
+                                        <input type="checkbox"
+                                               class="js_job_type_checkbox"
+                                               data-val="Contract"
+                                               {{#if job_type_count.Contract}}{{else}}disabled{{/if}}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="{{#if job_type_count.Volunteer}}active{{/if}}">
+                                    <div class="type_name">Freelance</div>
+                                    <div class="type_number">
+                                        {{#if job_type_count.Volunteer}}
+                                            {{job_type_count.Volunteer}}
+                                        {{else}}
+                                            0
+                                        {{/if}}
+                                    </div>
+                                    <label class="check_box">
+                                        <input type="checkbox"
+                                               class="js_job_type_checkbox"
+                                               data-val="Volunteer"
+                                               {{#if job_type_count.Volunteer}}{{else}}disabled{{/if}}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="{{#if job_type_count.Internship}}active{{/if}}">
+                                    <div class="type_name">Internship</div>
+                                    <div class="type_number">
+                                        {{#if job_type_count.Internship}}
+                                            {{job_type_count.Internship}}
+                                        {{else}}
+                                            0
+                                        {{/if}}
+                                    </div>
+                                    <label class="check_box">
+                                        <input type="checkbox"
+                                               class="js_job_type_checkbox"
+                                               data-val="Internship"
+                                               {{#if job_type_count.Internship}}{{else}}disabled{{/if}}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter_sec">
+                        <label class="box_label">
+                            Salary
+                        </label>
+                        <div class="box_sec">
+                            <div class="wrapper" style="padding:20px;">
+                                <div class="range-slider">
+                                    <input type="text" class="js-range-slider" value=""/>
+                                </div>
+                                <div class="extra-controls form-inline">
+                                    <div class="form-group">
+                                        <input type="hidden" class="js-input-from form-control" value="0"/>
+                                        <input type="hidden" class="js-input-to form-control" value="0"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer bottom_form=true  select2=true ranger=true}}
+</body>
+<script type="application/javascript">
+    $(function() {
+        JobSearchHandler.init();
+    });
+</script>
+</html>

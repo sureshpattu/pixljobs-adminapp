@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pixlcoders</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+    {{>header_assets select2=true}}
+</head>
+<body class="login_pg signup_pg">
+{{>header}}
+<section class="common_main_sec">
+    {{>common_hero_sec}}
+    <div class="cont_sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="login_form_sec">
+                        <div class="signup_wrap">
+                            <div class="row">
+                                <div class="col-xs-4 col-sm-6 col-md-6">
+                                    <div class="form-group pixl_form_group">
+                                        <div class="signup_title_wrap">
+                                            <div class="title">Login </div>
+                                            <div class="sub_title">Welcome Back!</div>
+                                        </div>
+                                    </div>
+                                    <div class="role_wrap">
+                                        <div class="form-group pixl_form_group">
+                                            <label for="" class="control-label">Select a role</label>
+                                            <div class="role_row">
+                                                <a class="btn signup-applicant role active js_applicant_tab">
+                                                    <img src="/img/icons/applicant-grey.svg" alt="" class="role_icon default_icon">
+                                                    <img src="/img/icons/applicant.svg" alt="" class="role_icon color_icon">
+                                                    Applicant</a>
+                                                <a class="btn signup-recruit role js_recruiter_tab">
+                                                    <img src="/img/icons/recruiter.svg" alt="" class="role_icon default_icon">
+                                                    <img src="/img/icons/recruiter-color.svg" alt="" class="role_icon color_icon">
+                                                    Recruiter</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <form class="" id="jsApplicantLoginForm">
+                                <div class="form-group pixl_form_group">
+                                    <label class="control-label">Email</label>
+                                    <div class="box_sec">
+                                        <input type="email" class="form-control required js_email"
+                                               placeholder="Your email address">
+                                    </div>
+                                </div>
+                                <div class="form-group pixl_form_group">
+                                    <label class="control-label">Password</label>
+                                    <div class="box_sec">
+                                        <input type="password" class="form-control required js_password"
+                                               placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <a href="/forgot-password" class="cta_link">forgot password</a>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn_big btn_blue">LOGIN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <form class="hide" id="jsRecruiterLoginForm">
+                                <div class="form-group pixl_form_group">
+                                    <label class="control-label">Email</label>
+                                    <div class="box_sec">
+                                        <input type="email" class="form-control required js_email"
+                                               placeholder="Your email address">
+                                    </div>
+                                </div>
+                                <div class="form-group pixl_form_group">
+                                    <label class="control-label">Password</label>
+                                    <div class="box_sec">
+                                        <input type="password" class="form-control required js_password"
+                                               placeholder="Enter password">
+                                    </div>
+                                </div>
+                                <a href="/forgot-password" class="cta_link">forgot password</a>
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <button type="submit" class="btn btn_big btn_blue">LOGIN</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{>footer_assets}}
+{{>footer swiper=true select2=true cropper=true}}
+</body>
+<script type="application/javascript">
+    $(function() {
+        LoginHandler.init();
+    });
+</script>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "ID": 1,
+        "Name": "Cardiology"
+    },
+    {
+        "ID": 15,
+        "Name": "General practice"
+    },
+    {
+        "ID": 18,
+        "Name": "Gynecology"
+    },
+    {
+        "ID": 22,
+        "Name": "Homeopathy"
+    },
+    {
+        "ID": 27,
+        "Name": "Neurology"
+    },
+    {
+        "ID": 31,
+        "Name": "Orthopedics"
+    },
+    {
+        "ID": 36,
+        "Name": "Psychiatry"
+    },
+    {
+        "ID": 43,
+        "Name": "Dentistry"
+    },
+    {
+        "ID": 44,
+        "Name": "Orthodontics"
+    }
+]

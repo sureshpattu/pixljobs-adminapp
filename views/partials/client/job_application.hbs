@@ -1,0 +1,59 @@
+{{#each data}}
+    <div class="panel card_sec js_card_sec">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-9">
+                    <a data-toggle="collapse" class="panel-title collapsed js_panel_title"
+                       data-parent="#accordion"
+                       href="#collapse_{{@index}}">
+                        <span class="highlights">{{job.name}}</span>
+                        <span class="small_txt">– {{job.company.name}}</span>
+                        <img src="/img/icons/arrow-right.svg" class="arrow_icon">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a class="close_btn_link js_close_btn_link hide">
+                        <img src="/img/icons/close.svg" class="close_icon">
+                        <span>CLOSE JOB</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="collapse_{{@index}}" class="panel-collapse collapse">
+            <div class="panel-body">
+                <div class="card_status_two_wrap {{status}}">
+                    <div class="viewed_sec card_cell">
+                        <div class="c_cont_sec">
+                            <!--                                                <span class="fa fa-check-circle"></span>-->
+                            <div class="c_circle">
+                                <img src="/img/icons/tick.svg" alt="" class="icon_tick">
+                            </div>
+                            <span class="c_name">Viewed</span>
+                            <span class="time_date_txt">1day ago</span>
+                        </div>
+                    </div>
+                    <div class="downloaded_sec card_cell">
+                        <div class="c_cont_sec">
+                            <!--                                                <span class="fa fa-check-circle"></span>-->
+                            <div class="c_circle">
+                                <img src="/img/icons/tick.svg" alt="" class="icon_tick">
+                            </div>
+                            <span class="c_name">Downloaded</span>
+                            <span class="time_date_txt">2hrs ago</span>
+                        </div>
+                    </div>
+                    <div class="shortlisted_sec card_cell">
+                        <div class="c_cont_sec">
+                            <!--                                                <span class="fa fa-check-circle"></span>-->
+                            <div class="c_circle">
+                                <img src="/img/icons/tick.svg" alt="" class="icon_tick">
+                            </div>
+                            <span class="c_name">Shortlisted</span>
+                            <span class="time_date_txt">0hrs ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}

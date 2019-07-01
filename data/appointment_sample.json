@@ -1,0 +1,27 @@
+[
+    {
+        "ID": 1,
+        "booking_date": "23/07/2018",
+        "booking_time": "10:20am",
+        "status": "pending",
+        "hospital": {
+            "ID": 1,
+            "hospital_name": "Apollo Clinic",
+            "address": "HSR, Sector 3, Bangalore",
+            "rating": 4,
+            "distance_from": "1",
+            "photo": "http://alpha.medinin.com/cdn/dfggkkkdgg",
+            "services": [
+                "EYE",
+                "ENT",
+                "Blood Test",
+                "MRI Scan"
+            ],
+            "time": [
+                "morning",
+                "evening"
+            ],
+            "total_reviews": 5
+        }
+    }
+]

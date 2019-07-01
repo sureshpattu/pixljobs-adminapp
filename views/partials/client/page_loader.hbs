@@ -1,0 +1,14 @@
+<div class="cd-popup is-visible page_loader_popup" role="alert" id="windowLoaderPopup">
+    <div class="cd-popup-container">
+        {{#if html}}
+            {{{html}}}
+        {{else}}
+            <div class="loader_table">
+                <div class="loader_table_cell">
+                    <img src="/img/loading.svg" class="loader_img">
+                </div>
+            </div>
+            <h2 class="hd_title">{{text}}</h2>
+        {{/if}}
+    </div>
+</div>

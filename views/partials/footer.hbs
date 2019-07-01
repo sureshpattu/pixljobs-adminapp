@@ -1,0 +1,39 @@
+<footer class="footer_pg">
+
+    <div class="find_job_sec {{#if bottom_form}}{{else}}hide{{/if}}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="title">
+                        We will find dream job for you!
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input_wrap">
+                        <input type="text" class="form-control cell_one" placeholder="Your email">
+                        <button type="button" class="cell_two">Start now!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar ">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img src="/img/logo.png">
+                </a>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+<!-- Footer assets file -->
+{{>footer_assets select2=select2 swiper=swiper cropper=cropper ranger=ranger}}

@@ -1,0 +1,14 @@
+//Utils
+@import "util/variables";
+@import "fonts/fonts";
+@import "util/mixins";
+@import "util/common";
+@import "util/pop_up";
+//Partials
+@import "partials/header";
+@import "partials/footer";
+@import "partials/menu";
+//Views
+@import "views/view_user_profile";
+@import "views/search_pg";
+@import "views/login";
