@@ -2,15 +2,16 @@
     <div class="panel main_card_sec js_main_card_sec">
         <div class="panel-heading">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-12">
                     <a data-toggle="collapse" class="panel-title collapsed js_panel_title"
                        data-parent="#accordion"
                        href="#collapse_{{@index}}">
                         <div class="title_sec">
                             <span class="highlights">{{name}}</span>
-                            <span class="small_txt">status rejected</span>
+                            <span class="small_txt">status : {{status}}</span>
                             <img src="/img/icons/arrow-down-small.svg" alt="" class="icon_arrow_down">
-                            <div class="small_txt trunc_txt">the is the description foe the text</div>
+
+                            {{#truncateText 'simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry' 40 }} {{/truncateText}}
                         </div>
                     </a>
                 </div>
@@ -21,13 +22,9 @@
                 <div class="job_card">
                     <div class="job_sec">
                         <div class="job_tags">
-
+                            <span class="small_txt">{{msg}}</span>
                         </div>
                     </div>
-                </div>
-                <div class="cta_wrap">
-                    <a class="btn btn_blue">Publish</a>
-                    <a class="btn btn_red">Reject</a>
                 </div>
             </div>
         </div>
