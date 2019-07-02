@@ -11,12 +11,7 @@
 <section class="common_main_sec">
     {{>common_hero_sec}}
     <div class="container">
-        <div class="common_tab_links_wrap">
-            <ul>
-                <li><a class="cta_link active" href="/">Jobs</a></li>
-                <li><a class="cta_link" href="/notifications">Notifications</a></li>
-            </ul>
-        </div>
+        {{>tab_links active_page='pending'}}
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="common_form_sec">
@@ -32,7 +27,7 @@
 </body>
 <script type="application/javascript">
     $(function() {
-
+        JobsHandler.init();
     });
 </script>
 </html>

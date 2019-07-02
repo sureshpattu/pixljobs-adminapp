@@ -41,4 +41,34 @@ router.post('/admin-auth/forgot/password/token', function(req, res, next) {
     });
 });
 
+router.post('/admin-notifications', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'POST', '/admin-notifications', function(_response) {
+        res.json(_response);
+    });
+});
+
+router.post('/notifications', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'POST', '/notifications', function(_response) {
+        res.json(_response);
+    });
+});
+
+router.post('/admin/publish/job/:id', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'POST', '/admin/publish/job/' + req.params.id, function(_response) {
+        res.json(_response);
+    });
+});
+
+router.put('/qa-jobs/:id', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'PUT', '/qa-jobs/' + req.params.id, function(_response) {
+        res.json(_response);
+    });
+});
+
+router.post('/qa-job/version', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'POST', '/qa-job/version', function(_response) {
+        res.json(_response);
+    });
+});
+
 module.exports = router;
