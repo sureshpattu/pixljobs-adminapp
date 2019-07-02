@@ -36,4 +36,26 @@ router.get('/', verify.isUserLoggedIn, function(req, res) {
     });
 });
 
+router.get('/notifications', verify.isUserLoggedIn, function(req, res) {
+    async.parallel([
+        function(callback) {
+            helper_utils.makeApiRequest(req, 'GET', '/admin/' + req.cookies.pj_ad_user_id,
+                function(_res) {
+                    callback(null, _res);
+                });
+        },
+        function(callback) {
+            helper_utils.makeApiRequest(req, 'POST', '/admin/qa-jobs/search',
+                function(_res) {
+                    callback(null, _res);
+                });
+        }
+    ], function(err, results) {
+        res.render('notifications', {
+            user:!results[0].error ? results[0].data : [],
+            data:!results[1].error ? results[1].data : []
+        });
+    });
+});
+
 module.exports = router;
