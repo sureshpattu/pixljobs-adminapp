@@ -45,7 +45,7 @@ router.get('/notifications', verify.isUserLoggedIn, function (req, res) {
                 });
         },
         function (callback) {
-            helper_utils.makeApiRequest(req, 'GET', '/admin-notifications',
+            helper_utils.makeApiRequest(req, 'POST', '/admin-notifications/fetch-all',
                 function (_res) {
                     callback(null, _res);
                 });
