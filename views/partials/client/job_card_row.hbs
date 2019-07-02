@@ -1,8 +1,8 @@
 {{#each data}}
-    <div class="panel main_card_sec js_main_card_sec">
+    <div class="panel main_card_sec js_main_card_sec" data-job-id="{{id}}">
         <div class="panel-heading">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <a data-toggle="collapse" class="panel-title collapsed js_panel_title"
                        data-parent="#accordion"
                        href="#collapse_{{@index}}">
@@ -16,10 +16,16 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="cta_wrap">
-                        <a class="btn btn_blue">Publish</a>
-                        <a class="btn btn_red">Reject</a>
+                        {{#ifCond status '===' 'published'}}
+                            <a class="btn btn_blue js_unpublish_job" data-type="pending">Un-publish</a>
+                        {{else}}
+                            <a class="btn btn_blue js_publish_job " data-type="published">Publish</a>
+                        {{/ifCond}}
+                        <a class="btn  js_reject_job" data-type="rejected">Reject</a>
+                        <input type="hidden" class="js_qa_job_title" value="{{name}}">
+                        <input type="hidden" class="js_qa_job_id" value="{{id}}">
                     </div>
                 </div>
             </div>
@@ -200,8 +206,12 @@
                     </div>
                 </div>
                 <div class="cta_wrap">
-                    <a class="btn btn_blue">Publish</a>
-                    <a class="btn btn_red">Reject</a>
+                    {{#ifCond status '===' 'published'}}
+                        <a class="btn btn_blue js_unpublish_job" data-type="pending">Un-publish</a>
+                    {{else}}
+                        <a class="btn btn_blue js_publish_job " data-type="published">Publish</a>
+                    {{/ifCond}}
+                    <a class="btn  js_reject_job" data-type="rejected">Reject</a>
                 </div>
             </div>
         </div>

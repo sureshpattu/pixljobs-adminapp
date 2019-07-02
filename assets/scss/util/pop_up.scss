@@ -119,6 +119,15 @@ body {
             display: block;
         }
     }
+
+    &.reason_form_popup {
+
+        .cd-popup-container {
+            max-width: 500px;
+            margin: 30px auto;
+        }
+
+    }
 }
 
 @media all and(max-width: 767px) {

@@ -1,0 +1,29 @@
+<div class="common_tab_links_wrap">
+    <ul>
+        <li>
+            <a class="cta_link {{#ifCond active_page '===' 'pending'}}active{{/ifCond}}"
+               href="/">
+                Pending Jobs
+            </a>
+        </li>
+        <li>
+            <a class="cta_link {{#ifCond active_page '===' 'published'}}active{{/ifCond}}"
+               href="/jobs-published">
+                Published Jobs
+            </a>
+        </li>
+        <li>
+            <a class="cta_link {{#ifCond active_page '===' 'rejected'}}active{{/ifCond}}"
+               href="/jobs-rejected">
+                Rejected Jobs
+            </a>
+        </li>
+        <li>
+            <a class="cta_link {{#ifCond active_page '===' 'notifications'}}active{{/ifCond}}"
+               href="/notifications">
+                Notifications
+            </a>
+        </li>
+        <input type="hidden" class="js_user_id" value="{{user.id}}">
+    </ul>
+</div>

@@ -11,12 +11,12 @@
 <section class="common_main_sec">
     {{>common_hero_sec}}
     <div class="container">
-        {{>tab_links active_page='notifications'}}
+        {{>tab_links active_page='published'}}
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="common_form_sec">
                     <div class="cards_wrap">
-                        {{>client/notification_card_row data=data.result}}
+                        {{>client/job_card_row data=data.result}}
                     </div>
                 </div>
             </div>
@@ -27,8 +27,7 @@
 </body>
 <script type="application/javascript">
     $(function() {
-
-        NotificationHandler.init();
+        JobsHandler.init();
     });
 </script>
 </html>
