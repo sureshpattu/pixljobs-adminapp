@@ -41,4 +41,10 @@ router.post('/admin-auth/forgot/password/token', function(req, res, next) {
     });
 });
 
+router.get('/admin-notifications', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'GET', '/admin-notifications', function(_response) {
+        res.json(_response);
+    });
+});
+
 module.exports = router;
