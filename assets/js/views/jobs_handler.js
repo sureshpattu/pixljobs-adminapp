@@ -6,9 +6,11 @@ var HandlebarHelpers = require('../utils/handlebar_helpers');
 function JobsHandler() {
 
     function postNotification(_obj, _ele) {
-        var _card_row  = _ele.closest('.js_main_card_sec');
-        var _qa_job_id = _card_row.data('job-id');
-        var _admin_id  = $('.js_user_id').val();
+        var _card_row     = _ele.closest('.js_main_card_sec');
+        var _qa_job_id    = _card_row.data('job-id');
+        var _recruiter_id = _card_row.data('recruiter-id');
+        var _admin_id     = $('.js_user_id').val();
+        _ele.recruiter_id = _recruiter_id;
 
         async.parallel([
             function(callback) {
