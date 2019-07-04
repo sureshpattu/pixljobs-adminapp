@@ -95,9 +95,9 @@ Handlebars.registerPartial("notification_card_row", Handlebars.template({"1":fun
     + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
     + "\">\n                        <div class=\"title_sec\">\n                            <span class=\"highlights\">"
     + alias4(container.lambda(((stack1 = (depth0 != null ? depth0.qa_job : depth0)) != null ? stack1.name : stack1), depth0))
-    + "</span>\n                            <img src=\"/img/icons/arrow-down-small.svg\" alt=\"\" class=\"icon_arrow_down\">\n\n                            "
+    + "</span>\n                            "
     + ((stack1 = (helpers.truncateText || (depth0 && depth0.truncateText) || alias2).call(alias1,(depth0 != null ? depth0.msg : depth0),40,{"name":"truncateText","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\n                        </div>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div id=\"collapse_"
+    + "\n                            <img src=\"/img/icons/arrow-down-small.svg\" alt=\"\" class=\"icon_arrow_down\">\n\n                        </div>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div id=\"collapse_"
     + alias4(((helper = (helper = helpers.index || (data && data.index)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"index","hash":{},"data":data}) : helper)))
     + "\" class=\"panel-collapse collapse\">\n            <div class=\"panel-body\">\n                <div class=\"job_card\">\n                    <div class=\"job_sec\">\n                        <div class=\"job_tags\">\n                            <span class=\"small_txt\">"
     + alias4(((helper = (helper = helpers.msg || (depth0 != null ? depth0.msg : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"msg","hash":{},"data":data}) : helper)))
