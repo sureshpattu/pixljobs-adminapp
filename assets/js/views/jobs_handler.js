@@ -56,8 +56,10 @@ function JobsHandler() {
         _form.submit(function(e) {
             e.preventDefault();
             if(FormValidator.validateForm(_form_name)) {
-                var _obj = {
-                    subject:_form.find('.js_qa_job_title').val() + ' - rejected',
+                var _parent = $(_ele.closest('.js_main_card_sec'));
+                var _title  = _parent.find('.js_qa_job_title').val();
+                var _obj    = {
+                    subject:_title + ' - rejected',
                     msg    :_form.find('.js_reason').val()
                 };
                 PopupPage.close();
@@ -91,12 +93,22 @@ function JobsHandler() {
         _form.submit(function(e) {
             e.preventDefault();
             if(FormValidator.validateForm(_form_name)) {
-                var _obj = {
-                    subject:_form.find('.js_qa_job_title').val() + ' - unpublished',
+                var _parent    = $(_ele.closest('.js_main_card_sec'));
+                var _title     = _parent.find('.js_qa_job_title').val();
+                var _qa_job_id = _parent.find('.js_qa_job_id').val();
+                var _obj       = {
+                    subject:_title + ' - unpublished',
                     msg    :_form.find('.js_reason').val()
                 };
                 PopupPage.close();
-                postNotification(_obj, _ele);
+                ApiUtil.makeAjaxRequest('/api/admin/un-publish/job/' + _qa_job_id, '', 'POST', '', _obj,
+                    function(_res) {
+                        if(!_res.error) {
+                            postNotification(_obj, _ele);
+                        } else {
+                            alert(_res.message || 'Something went wrong!');
+                        }
+                    });
             }
             return false;
         });

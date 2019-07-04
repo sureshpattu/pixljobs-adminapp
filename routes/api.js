@@ -59,6 +59,12 @@ router.post('/admin/publish/job/:id', function(req, res, next) {
     });
 });
 
+router.post('/admin/un-publish/job/:id', function(req, res, next) {
+    helper_utils.makeApiRequest(req, 'POST', '/admin/un-publish/job/' + req.params.id, function(_response) {
+        res.json(_response);
+    });
+});
+
 router.put('/qa-jobs/:id', function(req, res, next) {
     helper_utils.makeApiRequest(req, 'PUT', '/qa-jobs/' + req.params.id, function(_response) {
         res.json(_response);
