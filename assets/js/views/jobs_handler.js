@@ -10,7 +10,9 @@ function JobsHandler() {
         var _qa_job_id    = _card_row.data('job-id');
         var _recruiter_id = _card_row.data('recruiter-id');
         var _admin_id     = $('.js_user_id').val();
-        _ele.recruiter_id = _recruiter_id;
+        _obj.recruiter_id = _recruiter_id;
+        _obj.admin_id     = _admin_id;
+        _obj.qa_job_id    = _qa_job_id;
 
         async.parallel([
             function(callback) {
