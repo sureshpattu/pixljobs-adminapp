@@ -109,21 +109,11 @@
                                 </div>
                                 <div class="desc">
                                     <ul class="requirement_list">
-                                        <li class="requirement_line">Lorem ipsum dolor sit amet, consectetur
-                                            adipiscing elit,
-                                        </li>
-                                        <li class="requirement_line">ed do eiusmod tempor</li>
-                                        <li class="requirement_line">incididunt ut labore et dolore magna
-                                            aliquaelementum eu facilisis
-                                            sed
-                                        </li>
-                                        <li class="requirement_line">odio morbi. Auctor eu augue ut lectus.
-                                            Lacus vestibulum sed arcu
-                                            non.
-                                            Leo in
-                                            vitae
-                                            turpis massa sed elementum tempus egestas. Vitae congue eu.
-                                        </li>
+                                        {{#each qa_job_requirements}}
+                                            <li class="requirement_line">
+                                                {{requirement.desc}}
+                                            </li>
+                                        {{/each}}
                                     </ul>
                                 </div>
                             </div>
