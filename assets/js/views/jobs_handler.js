@@ -5,6 +5,24 @@ var HandlebarHelpers = require('../utils/handlebar_helpers');
 
 function JobsHandler() {
 
+    function updateAdminDetailsInQaJob(_obj, _ele, callback) {
+        var _card_row     = _ele.closest('.js_main_card_sec');
+        var _qa_job_id    = _card_row.data('job-id');
+        var _recruiter_id = _card_row.data('recruiter-id');
+        var _admin_id     = $('.js_user_id').val();
+
+        var _adminObj = {
+            admin_id  :_admin_id,
+            admin_msg :_obj.msg,
+            admin_date:new Date(),
+            status    :_ele.data('type')
+        };
+        ApiUtil.makeAjaxRequest('/api/qa-jobs/' + _card_row.data('job-id'), '', 'PUT', '', _adminObj,
+            function(_res) {
+                callback();
+            });
+    }
+
     function postNotification(_obj, _ele) {
         var _card_row     = _ele.closest('.js_main_card_sec');
         var _qa_job_id    = _card_row.data('job-id');
@@ -23,18 +41,6 @@ function JobsHandler() {
                         alert(_res.message || 'Something went wrong!');
                     }
                 });
-            },
-            function(callback) {
-                var _adminObj = {
-                    admin_id  :_admin_id,
-                    admin_msg :_ele.msg,
-                    admin_date:new Date(),
-                    status    :_ele.data('type')
-                };
-                ApiUtil.makeAjaxRequest('/api/qa-jobs/' + _card_row.data('job-id'), '', 'PUT', '', _adminObj,
-                    function(_res) {
-                        callback(null, _res);
-                    });
             },
             function(callback) {
                 var _jobVersionObj = {
@@ -65,7 +71,10 @@ function JobsHandler() {
                     msg    :_form.find('.js_reason').val()
                 };
                 PopupPage.close();
-                postNotification(_obj, _ele);
+
+                updateAdminDetailsInQaJob(_obj, _ele, function() {
+                    postNotification(_obj, _ele);
+                });
             }
             return false;
         });
@@ -80,13 +89,16 @@ function JobsHandler() {
             msg    :'Your job has been published'
         };
 
-        ApiUtil.makeAjaxRequest('/api/admin/publish/job/' + _qa_job_id, '', 'POST', '', _obj, function(_res) {
-            if(!_res.error) {
-                postNotification(_obj, _ele);
-            } else {
-                alert(_res.message || 'Something went wrong!');
-            }
+        updateAdminDetailsInQaJob(_obj, _ele, function() {
+            ApiUtil.makeAjaxRequest('/api/admin/publish/job/' + _qa_job_id, '', 'POST', '', _obj, function(_res) {
+                if(!_res.error) {
+                    postNotification(_obj, _ele);
+                } else {
+                    alert(_res.message || 'Something went wrong!');
+                }
+            });
         });
+
     }
 
     function bindUnPublishFormEvent(_ele) {
@@ -103,14 +115,17 @@ function JobsHandler() {
                     msg    :_form.find('.js_reason').val()
                 };
                 PopupPage.close();
-                ApiUtil.makeAjaxRequest('/api/admin/un-publish/job/' + _qa_job_id, '', 'POST', '', _obj,
-                    function(_res) {
-                        if(!_res.error) {
-                            postNotification(_obj, _ele);
-                        } else {
-                            alert(_res.message || 'Something went wrong!');
-                        }
-                    });
+                updateAdminDetailsInQaJob(_obj, _ele, function() {
+                    ApiUtil.makeAjaxRequest('/api/admin/un-publish/job/' + _qa_job_id, '', 'POST', '', _obj,
+                        function(_res) {
+                            if(!_res.error) {
+                                postNotification(_obj, _ele);
+                            } else {
+                                alert(_res.message || 'Something went wrong!');
+                            }
+                        });
+                });
+
             }
             return false;
         });
