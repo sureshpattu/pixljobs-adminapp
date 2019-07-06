@@ -21,7 +21,7 @@
         <li>
             <a class="cta_link {{#ifCond active_page '===' 'notifications'}}active{{/ifCond}}"
                href="/notifications">
-                Notifications
+                Notifications <span class="badge notification_count">{{data.total}}</span>
             </a>
         </li>
         <input type="hidden" class="js_user_id" value="{{user.id}}">
