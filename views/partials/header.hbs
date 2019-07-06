@@ -18,7 +18,11 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 {{#if user.photo}}
                                     <img src="/api/applicant/photo/{{user.photo}}" class="user_img">
-                                    <span class="badge notification_head_count">7</span>
+                                    <!--<span class="badge notification_head_count">-->
+                                        <!--{{#ifCond user.notification ">" 0}}-->
+                                            <!--{{user.notification}}-->
+                                        <!--{{/ifCond}}-->
+                                    <!--</span>-->
                                 {{else}}
                                     <img src="/img/user_icon.svg" class="user_img">
                                     <span class="badge notification_head_count">7</span>
