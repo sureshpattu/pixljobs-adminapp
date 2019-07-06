@@ -18,8 +18,10 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                 {{#if user.photo}}
                                     <img src="/api/applicant/photo/{{user.photo}}" class="user_img">
+                                    <span class="badge notification_head_count">7</span>
                                 {{else}}
                                     <img src="/img/user_icon.svg" class="user_img">
+                                    <span class="badge notification_head_count">7</span>
                                 {{/if}}
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
