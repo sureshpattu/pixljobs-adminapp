@@ -67,7 +67,7 @@ function JobsHandler() {
                 var _parent = $(_ele.closest('.js_main_card_sec'));
                 var _title  = _parent.find('.js_qa_job_title').val();
                 var _obj    = {
-                    subject:_title + ' - rejected',
+                    subject:_title + ' - REJECTED',
                     msg    :_form.find('.js_reason').val()
                 };
                 PopupPage.close();
@@ -85,7 +85,7 @@ function JobsHandler() {
         var _title     = _parent.find('.js_qa_job_title').val();
         var _qa_job_id = _parent.find('.js_qa_job_id').val();
         var _obj       = {
-            subject:_title + ' - published',
+            subject:_title + ' - PUBLISHED',
             msg    :'Your job has been published'
         };
 
@@ -111,7 +111,7 @@ function JobsHandler() {
                 var _title     = _parent.find('.js_qa_job_title').val();
                 var _qa_job_id = _parent.find('.js_qa_job_id').val();
                 var _obj       = {
-                    subject:_title + ' - unpublished',
+                    subject:_title + ' - UNPUBLISHED',
                     msg    :_form.find('.js_reason').val()
                 };
                 PopupPage.close();
