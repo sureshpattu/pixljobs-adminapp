@@ -17,6 +17,13 @@
                 <div class="common_form_sec">
                     <div class="cards_wrap">
                         {{>client/job_card_row data=data.result}}
+                        <div class="bottom_cta_wrap">
+                            <a class="cta_load_more_link js_load_more_btn {{#ifCond data.total '=' '0'}}
+                            {{else}}hide{{/ifCond}}">
+                                No Pending Jobs
+                                <img src="/img/icons/arrow-down.svg" class="fa" alt="">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
