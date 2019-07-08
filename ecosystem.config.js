@@ -1,7 +1,7 @@
 module.exports = {
     apps:[
         {
-            name          :'Web',
+            name          :'Admin',
             script        :'./bin/www',
             watch         :false,
             env           :{
