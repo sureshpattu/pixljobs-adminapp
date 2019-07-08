@@ -133,6 +133,19 @@ function JobsHandler() {
 
     function bindClickEvents() {
 
+
+        $('.js_load_more_published').click(function() {
+            loadMorePublishedJobs();
+        });
+
+        $('.js_load_more_rejected').click(function() {
+            loadMoreRejectedJobs();
+        });
+
+        $('.js_load_more_pending').click(function() {
+            loadMorePendingJobs();
+        });
+
         $('.js_publish_job').click(function() {
             publishJob($(this));
         });
