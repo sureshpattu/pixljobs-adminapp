@@ -16,8 +16,9 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="common_form_sec">
                     <div class="cards_wrap">
-                        <div class="published_job_list_wrap">
+                        <div class="pending_job_list_wrap">
                             {{>client/job_card_row data=data.result}}
+                            <input type="hidden" class="js_status">
                         </div>
                         <div class="bottom_cta_wrap">
                             <a class="cta_load_more_link js_load_more_pending {{#ifCond data.result '>' '1'}}

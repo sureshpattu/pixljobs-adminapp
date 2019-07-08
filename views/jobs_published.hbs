@@ -18,6 +18,7 @@
                     <div class="cards_wrap">
                         <div class="published_job_list_wrap">
                             {{>client/job_card_row data=data.result}}
+                            <input type="hidden" class="js_status">
                         </div>
                         <div class="bottom_cta_wrap">
                             <a class="cta_load_more_link js_load_more_published {{#ifCond data.result '>' '1'}}
