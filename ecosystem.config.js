@@ -1,15 +1,15 @@
 module.exports = {
     apps:[
         {
-            name          :'Web',
+            name          :'Admin',
             script        :'./bin/www',
             watch         :false,
             env           :{
-                'PORT'    :3035,
+                'PORT'    :3034,
                 'NODE_ENV':'development'
             },
             env_production:{
-                'PORT'    :3035,
+                'PORT'    :3034,
                 'NODE_ENV':'production'
             }
         }
