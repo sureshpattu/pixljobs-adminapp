@@ -503,11 +503,11 @@ var HandlebarHelpers = require('../utils/handlebar_helpers');
 
 function JobsHandler() {
     var job_list_wrap = $('.job_list_wrap');
-    var _query = {
-        page :0,
-        limit:10
-    },
-        _jobTypeArr = [];
+    var _query        = {
+            page :0,
+            limit:10
+        },
+        _jobTypeArr   = [];
 
     function updateAdminDetailsInQaJob(_obj, _ele, callback) {
         var _card_row     = _ele.closest('.js_main_card_sec');
@@ -640,6 +640,7 @@ function JobsHandler() {
             _query.job_type = _jobTypeArr;
         }
         _query.page = _query.page + 1;
+        _query.status = $('.js_status').val();
 
         var callback = function(resData) {
             if(!resData.error) {
@@ -660,12 +661,6 @@ function JobsHandler() {
 
             }
         };
-         var _obj = {
-             status:$('.js_status').val()
-
-         }
-
-
 
         ApiUtil.makeAjaxRequest('/api/admin/qa-jobs/search', '', 'POST', '', _query, callback);
     }
