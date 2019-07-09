@@ -140,12 +140,19 @@ router.get('/notifications', verify.isUserLoggedIn, function(req, res) {
                 function(_res) {
                     callback(null, _res);
                 });
+        },
+        function(callback) {
+            helper_utils.makeApiRequest(req, 'GET', '/admin/qa-jobs/count',
+                function(_res) {
+                    callback(null, _res);
+                });
         }
 
     ], function(err, results) {
         res.render('notifications', {
-            user:!results[0].error ? results[0].data : [],
-            data:!results[1].error ? results[1].data : []
+            user :!results[0].error ? results[0].data : [],
+            data :!results[1].error ? results[1].data : [],
+            count:!results[2].error ? results[2].data : []
         });
     });
 });

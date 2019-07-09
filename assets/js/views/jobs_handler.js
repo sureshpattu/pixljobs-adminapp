@@ -137,9 +137,9 @@ function JobsHandler() {
         });
     }
 
-    function loadMorePublishedJobs() {
-        if(_publishTypeArr.length) {
-            _query.job_type = _publishTypeArr;
+    function loadMoreJobs() {
+        if(_jobTypeArr.length) {
+            _query.job_type = _jobTypeArr;
         }
         _query.page = _query.page + 1;
 
@@ -151,13 +151,13 @@ function JobsHandler() {
                     var _html = Handlebars.partials['job_card_row']({
                         data:resData.data.result
                     });
-                    published_job_list_wrap.append(_html);
+                    job_list_wrap.append(_html);
                 }
 
                 if(resData.data.pages >= (_query.page + 1)) {
-                    $('.js_load_more_published').addClass('hide');
+                    $('.js_load_more_job').addClass('hide');
                 } else {
-                    $('.js_load_more_published').removeClass('hide');
+                    $('.js_load_more_job').removeClass('hide');
                 }
 
             }
@@ -172,74 +172,10 @@ function JobsHandler() {
         ApiUtil.makeAjaxRequest('/api/admin/qa-jobs/search', '', 'POST', '', _query, callback);
     }
 
-    function loadMoreRejectedJobs() {
-        if(_rejectedTypeArr.length) {
-            _query.job_type = _rejectedTypeArr;
-        }
-        _query.page = _query.page + 1;
-
-        var callback = function(resData) {
-            if(!resData.error) {
-                var _length = resData.data.result.length;
-
-                if(_length) {
-                    var _html = Handlebars.partials['job_card_row']({
-                        data:resData.data.result
-                    });
-                    rejected_job_list_wrap.append(_html);
-                }
-
-                if(resData.data.pages >= (_query.page + 1)) {
-                    $('.js_load_more_rejected').addClass('hide');
-                } else {
-                    $('.js_load_more_rejected').removeClass('hide');
-                }
-
-            }
-        };
-        ApiUtil.makeAjaxRequest('/api/admin/qa-jobs/search', '', 'POST', '', _query, callback);
-    }
-
-    function loadMorePendingJobs() {
-        if(_pendingTypeArr.length) {
-            _query.job_type = _pendingTypeArr;
-        }
-        _query.page = _query.page + 1;
-
-        var callback = function(resData) {
-            if(!resData.error) {
-                var _length = resData.data.result.length;
-
-                if(_length) {
-                    var _html = Handlebars.partials['job_card_row']({
-                        data:resData.data.result
-                    });
-                    pending_job_list_wrap.append(_html);
-                }
-
-                if(resData.data.pages >= (_query.page + 1)) {
-                    $('.js_load_more_pending').addClass('hide');
-                } else {
-                    $('.js_load_more_pending').removeClass('hide');
-                }
-
-            }
-        };
-        ApiUtil.makeAjaxRequest('/api/admin/publish/job/:id', '', 'POST', '', _query, callback);
-    }
-
     function bindClickEvents() {
 
-        $('.js_load_more_published').click(function() {
-            loadMorePublishedJobs();
-        });
-
-        $('.js_load_more_rejected').click(function() {
-            loadMoreRejectedJobs();
-        });
-
-        $('.js_load_more_pending').click(function() {
-            loadMorePendingJobs();
+        $('.js_load_more_job').click(function() {
+            loadMoreJobs();
         });
 
         $('.js_publish_job').click(function() {
