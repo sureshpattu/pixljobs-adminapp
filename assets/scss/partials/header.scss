@@ -67,6 +67,16 @@
                         font-size: 14px;
                     }
                 }
+
+                .notification_link {
+                    position: absolute;
+                    top: 5px;
+                    left: 40px;
+
+                    a {
+                        padding: 0;
+                    }
+                }
             }
         }
     }
