@@ -16,7 +16,17 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="common_form_sec">
                     <div class="cards_wrap">
-                        {{>client/job_card_row data=data.result}}
+                        <div class="rejected_job_list_wrap">
+                            {{>client/job_card_row data=data.result}}
+                            <input type="hidden" class="js_status">
+                        </div>
+                        <div class="bottom_cta_wrap">
+                            <a class="cta_load_more_link js_load_more_rejected {{#ifCond data.result '>' '1'}}
+                            {{else}}hide{{/ifCond}}">
+                                Show more
+                                <img src="/img/icons/arrow-down.svg" class="fa" alt="">
+                            </a>
+                        </div>
                         <div class="bottom_cta_wrap">
                             <a class="cta_load_more_link js_load_more_btn {{#ifCond data.total '=' '0'}}
                             {{else}}hide{{/ifCond}}">

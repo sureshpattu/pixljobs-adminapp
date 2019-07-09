@@ -4,18 +4,27 @@
             <a class="cta_link {{#ifCond active_page '===' 'pending'}}active{{/ifCond}}"
                href="/">
                 Pending Jobs
+                {{#if count.pending}}
+                    <span class="badge notification_count">{{count.pending}}</span>
+                {{/if}}
             </a>
         </li>
         <li>
             <a class="cta_link {{#ifCond active_page '===' 'published'}}active{{/ifCond}}"
                href="/jobs-published">
                 Published Jobs
+                {{#if count.published}}
+                    <span class="badge notification_count">{{count.published}}</span>
+                {{/if}}
             </a>
         </li>
         <li>
             <a class="cta_link {{#ifCond active_page '===' 'rejected'}}active{{/ifCond}}"
                href="/jobs-rejected">
                 Rejected Jobs
+                {{#if count.rejected}}
+                    <span class="badge notification_count">{{count.rejected}}</span>
+                {{/if}}
             </a>
         </li>
         <li>
