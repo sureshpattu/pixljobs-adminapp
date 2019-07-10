@@ -8,7 +8,7 @@
                        href="#collapse_{{@index}}">
                         <div class="title_sec">
                             <span class="highlights">{{name}}</span>
-                            <span class="small_txt">5+ years</span>
+                            <span class="small_txt">{{exp_year}}.{{exp_month}}+ Years</span>
                             <img src="/img/icons/arrow-down-small.svg" alt="" class="icon_arrow_down">
                         </div>
                         <div class="sub_title_sec">
@@ -206,4 +206,6 @@
             </div>
         </div>
     </div>
+{{else}}
+    <h4 class="text-center text-capitalize">NO DATA FOUND!</h4>
 {{/each}}

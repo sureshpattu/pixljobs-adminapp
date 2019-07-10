@@ -21,10 +21,15 @@
                                 {{else}}
                                     <img src="/img/user_icon.svg" class="user_img">
                                 {{/if}}
-                                {{#if user.total_notifications}}
-                                    <span class="badge notification_head_count">{{user.total_notifications}}</span>
-                                {{/if}}
-                                <span class="caret"></span></a>
+                                <span class="caret"></span>
+                                <div class="notification_link">
+                                    <a href="/notifications" class="cta_link">
+                                        {{#if user.total_notifications}}
+                                            <span class="badge notification_head_count">{{user.total_notifications}}</span>
+                                        {{/if}}
+                                    </a>
+                                </div>
+                            </a>
                             <ul class="dropdown-menu">
                                 <li><a href="/">Jobs</a></li>
                                 <li><a href="/logout" title="PixlJobs Login Page">Log out</a></li>
