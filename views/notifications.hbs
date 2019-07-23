@@ -31,8 +31,7 @@
                         </div>
 
                         <div class="bottom_cta_wrap">
-                            <a class="cta_load_more_link js_load_more_btn {{#ifCond data.result '>' '1'}}
-                            {{else}}hide{{/ifCond}}">
+                            <a class="cta_load_more_link js_load_more_btn {{#ifCond data.total '<' '9'}}hide{{/ifCond}}">
                                 Show more notifications
                                 <img src="/img/icons/arrow-down.svg" class="fa" alt="">
                             </a>
