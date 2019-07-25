@@ -133,9 +133,21 @@
                                                     <div class="tech_name">{{technology.name}}</div>
                                                 </div>
                                                 <div class="col-md-6 col-xs-6">
-                                                    <div class="filled_bar"></div>
-                                                    <div class="filled_bar"></div>
-                                                    <div class="empty_bar"></div>
+                                                    {{#ifCond level '===' 'Basic'}}
+                                                        <div class="filled_bar"></div>
+                                                        <div class="empty_bar"></div>
+                                                        <div class="empty_bar"></div>
+                                                    {{/ifCond}}
+                                                    {{#ifCond level '===' 'Proficient'}}
+                                                        <div class="filled_bar"></div>
+                                                        <div class="filled_bar"></div>
+                                                        <div class="empty_bar"></div>
+                                                    {{/ifCond}}
+                                                    {{#ifCond level '===' 'Expert'}}
+                                                        <div class="filled_bar"></div>
+                                                        <div class="filled_bar"></div>
+                                                        <div class="filled_bar"></div>
+                                                    {{/ifCond}}
                                                 </div>
                                             </div>
                                         </div>
